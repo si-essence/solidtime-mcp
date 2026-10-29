@@ -1,0 +1,603 @@
+{
+ "openapi": "3.1.0",
+ "info": {
+  "title": "Route fixture (paths, methods, operationIds only)",
+  "version": "0.0.1"
+ },
+ "paths": {
+  "/v1/users/me/api-tokens": {
+   "get": {
+    "operationId": "getApiTokens",
+    "tags": [
+     "ApiToken"
+    ]
+   },
+   "post": {
+    "operationId": "createApiToken",
+    "tags": [
+     "ApiToken"
+    ]
+   }
+  },
+  "/v1/users/me/api-tokens/{apiToken}/revoke": {
+   "post": {
+    "operationId": "revokeApiToken",
+    "tags": [
+     "ApiToken"
+    ]
+   }
+  },
+  "/v1/users/me/api-tokens/{apiToken}": {
+   "delete": {
+    "operationId": "deleteApiToken",
+    "tags": [
+     "ApiToken"
+    ]
+   }
+  },
+  "/v1/organizations/{organization}/charts/weekly-project-overview": {
+   "get": {
+    "operationId": "weeklyProjectOverview",
+    "tags": [
+     "Chart"
+    ]
+   }
+  },
+  "/v1/organizations/{organization}/charts/latest-tasks": {
+   "get": {
+    "operationId": "latestTasks",
+    "tags": [
+     "Chart"
+    ]
+   }
+  },
+  "/v1/organizations/{organization}/charts/last-seven-days": {
+   "get": {
+    "operationId": "lastSevenDays",
+    "tags": [
+     "Chart"
+    ]
+   }
+  },
+  "/v1/organizations/{organization}/charts/latest-team-activity": {
+   "get": {
+    "operationId": "latestTeamActivity",
+    "tags": [
+     "Chart"
+    ]
+   }
+  },
+  "/v1/organizations/{organization}/charts/daily-tracked-hours": {
+   "get": {
+    "operationId": "dailyTrackedHours",
+    "tags": [
+     "Chart"
+    ]
+   }
+  },
+  "/v1/organizations/{organization}/charts/total-weekly-time": {
+   "get": {
+    "operationId": "totalWeeklyTime",
+    "tags": [
+     "Chart"
+    ]
+   }
+  },
+  "/v1/organizations/{organization}/charts/total-weekly-billable-time": {
+   "get": {
+    "operationId": "totalWeeklyBillableTime",
+    "tags": [
+     "Chart"
+    ]
+   }
+  },
+  "/v1/organizations/{organization}/charts/total-weekly-billable-amount": {
+   "get": {
+    "operationId": "totalWeeklyBillableAmount",
+    "tags": [
+     "Chart"
+    ]
+   }
+  },
+  "/v1/organizations/{organization}/charts/weekly-history": {
+   "get": {
+    "operationId": "weeklyHistory",
+    "tags": [
+     "Chart"
+    ]
+   }
+  },
+  "/v1/organizations/{organization}/clients": {
+   "get": {
+    "operationId": "getClients",
+    "tags": [
+     "Client"
+    ]
+   },
+   "post": {
+    "operationId": "createClient",
+    "tags": [
+     "Client"
+    ]
+   }
+  },
+  "/v1/organizations/{organization}/clients/{client}": {
+   "put": {
+    "operationId": "updateClient",
+    "tags": [
+     "Client"
+    ]
+   },
+   "delete": {
+    "operationId": "deleteClient",
+    "tags": [
+     "Client"
+    ]
+   }
+  },
+  "/v1/currencies": {
+   "get": {
+    "operationId": "getCurrencies",
+    "tags": [
+     "Currency"
+    ]
+   }
+  },
+  "/v1/organizations/{organization}/export": {
+   "post": {
+    "operationId": "exportOrganization",
+    "tags": [
+     "Export"
+    ]
+   }
+  },
+  "/v1/organizations/{organization}/goals": {
+   "get": {
+    "operationId": "getGoals",
+    "tags": [
+     "Goal"
+    ]
+   },
+   "post": {
+    "operationId": "createGoal",
+    "tags": [
+     "Goal"
+    ]
+   }
+  },
+  "/v1/organizations/{organization}/goals/{goal}": {
+   "get": {
+    "operationId": "getGoal",
+    "tags": [
+     "Goal"
+    ]
+   },
+   "put": {
+    "operationId": "updateGoal",
+    "tags": [
+     "Goal"
+    ]
+   },
+   "delete": {
+    "operationId": "deleteGoal",
+    "tags": [
+     "Goal"
+    ]
+   }
+  },
+  "/v1/organizations/{organization}/importers": {
+   "get": {
+    "operationId": "getImporters",
+    "tags": [
+     "Import"
+    ]
+   }
+  },
+  "/v1/organizations/{organization}/import": {
+   "post": {
+    "operationId": "importData",
+    "tags": [
+     "Import"
+    ]
+   }
+  },
+  "/v1/organizations/{organization}/invitations": {
+   "get": {
+    "operationId": "getInvitations",
+    "tags": [
+     "Invitation"
+    ]
+   },
+   "post": {
+    "operationId": "invite",
+    "tags": [
+     "Invitation"
+    ]
+   }
+  },
+  "/v1/organizations/{organization}/invitations/{invitation}/resend": {
+   "post": {
+    "operationId": "resendInvitationEmail",
+    "tags": [
+     "Invitation"
+    ]
+   }
+  },
+  "/v1/organizations/{organization}/invitations/{invitation}": {
+   "delete": {
+    "operationId": "removeInvitation",
+    "tags": [
+     "Invitation"
+    ]
+   }
+  },
+  "/v1/organizations/{organization}/members": {
+   "get": {
+    "operationId": "getMembers",
+    "tags": [
+     "Member"
+    ]
+   }
+  },
+  "/v1/organizations/{organization}/members/{member}": {
+   "put": {
+    "operationId": "updateMember",
+    "tags": [
+     "Member"
+    ]
+   },
+   "delete": {
+    "operationId": "removeMember",
+    "tags": [
+     "Member"
+    ]
+   }
+  },
+  "/v1/organizations/{organization}/members/{member}/invite-placeholder": {
+   "post": {
+    "operationId": "invitePlaceholder",
+    "tags": [
+     "Member"
+    ]
+   }
+  },
+  "/v1/organizations/{organization}/members/{member}/make-placeholder": {
+   "post": {
+    "operationId": "makePlaceholder",
+    "tags": [
+     "Member"
+    ]
+   }
+  },
+  "/v1/organizations/{organization}/member/{member}/merge-into": {
+   "post": {
+    "operationId": "mergeMember",
+    "tags": [
+     "Member"
+    ]
+   }
+  },
+  "/v1/organizations": {
+   "post": {
+    "operationId": "createOrganization",
+    "tags": [
+     "Organization"
+    ]
+   }
+  },
+  "/v1/organizations/{organization}": {
+   "get": {
+    "operationId": "getOrganization",
+    "tags": [
+     "Organization"
+    ]
+   },
+   "put": {
+    "operationId": "updateOrganization",
+    "tags": [
+     "Organization"
+    ]
+   },
+   "delete": {
+    "operationId": "deleteOrganization",
+    "tags": [
+     "Organization"
+    ]
+   }
+  },
+  "/v1/organizations/{organization}/projects": {
+   "get": {
+    "operationId": "getProjects",
+    "tags": [
+     "Project"
+    ]
+   },
+   "post": {
+    "operationId": "createProject",
+    "tags": [
+     "Project"
+    ]
+   }
+  },
+  "/v1/organizations/{organization}/projects/{project}": {
+   "get": {
+    "operationId": "getProject",
+    "tags": [
+     "Project"
+    ]
+   },
+   "put": {
+    "operationId": "updateProject",
+    "tags": [
+     "Project"
+    ]
+   },
+   "delete": {
+    "operationId": "deleteProject",
+    "tags": [
+     "Project"
+    ]
+   }
+  },
+  "/v1/organizations/{organization}/projects/{project}/project-members": {
+   "get": {
+    "operationId": "getProjectMembers",
+    "tags": [
+     "ProjectMember"
+    ]
+   },
+   "post": {
+    "operationId": "createProjectMember",
+    "tags": [
+     "ProjectMember"
+    ]
+   }
+  },
+  "/v1/organizations/{organization}/project-members/{projectMember}": {
+   "put": {
+    "operationId": "updateProjectMember",
+    "tags": [
+     "ProjectMember"
+    ]
+   },
+   "delete": {
+    "operationId": "deleteProjectMember",
+    "tags": [
+     "ProjectMember"
+    ]
+   }
+  },
+  "/v1/organizations/{organization}/reports": {
+   "get": {
+    "operationId": "getReports",
+    "tags": [
+     "Report"
+    ]
+   },
+   "post": {
+    "operationId": "createReport",
+    "tags": [
+     "Report"
+    ]
+   }
+  },
+  "/v1/organizations/{organization}/reports/{report}": {
+   "get": {
+    "operationId": "getReport",
+    "tags": [
+     "Report"
+    ]
+   },
+   "put": {
+    "operationId": "updateReport",
+    "tags": [
+     "Report"
+    ]
+   },
+   "delete": {
+    "operationId": "deleteReport",
+    "tags": [
+     "Report"
+    ]
+   }
+  },
+  "/v1/public/reports": {
+   "get": {
+    "operationId": "getPublicReport",
+    "tags": [
+     "Report"
+    ]
+   }
+  },
+  "/v1/organizations/{organization}/tags": {
+   "get": {
+    "operationId": "getTags",
+    "tags": [
+     "Tag"
+    ]
+   },
+   "post": {
+    "operationId": "createTag",
+    "tags": [
+     "Tag"
+    ]
+   }
+  },
+  "/v1/organizations/{organization}/tags/{tag}": {
+   "put": {
+    "operationId": "updateTag",
+    "tags": [
+     "Tag"
+    ]
+   },
+   "delete": {
+    "operationId": "deleteTag",
+    "tags": [
+     "Tag"
+    ]
+   }
+  },
+  "/v1/organizations/{organization}/tasks": {
+   "get": {
+    "operationId": "getTasks",
+    "tags": [
+     "Task"
+    ]
+   },
+   "post": {
+    "operationId": "createTask",
+    "tags": [
+     "Task"
+    ]
+   }
+  },
+  "/v1/organizations/{organization}/tasks/{task}": {
+   "put": {
+    "operationId": "updateTask",
+    "tags": [
+     "Task"
+    ]
+   },
+   "delete": {
+    "operationId": "deleteTask",
+    "tags": [
+     "Task"
+    ]
+   }
+  },
+  "/v1/organizations/{organization}/time-entries": {
+   "get": {
+    "operationId": "getTimeEntries",
+    "tags": [
+     "TimeEntry"
+    ]
+   },
+   "post": {
+    "operationId": "createTimeEntry",
+    "tags": [
+     "TimeEntry"
+    ]
+   },
+   "patch": {
+    "operationId": "updateMultipleTimeEntries",
+    "tags": [
+     "TimeEntry"
+    ]
+   },
+   "delete": {
+    "operationId": "deleteTimeEntries",
+    "tags": [
+     "TimeEntry"
+    ]
+   }
+  },
+  "/v1/organizations/{organization}/time-entries/export": {
+   "get": {
+    "operationId": "exportTimeEntries",
+    "tags": [
+     "TimeEntry"
+    ]
+   }
+  },
+  "/v1/organizations/{organization}/time-entries/aggregate": {
+   "get": {
+    "operationId": "getAggregatedTimeEntries",
+    "tags": [
+     "TimeEntry"
+    ]
+   }
+  },
+  "/v1/organizations/{organization}/time-entries/aggregate/export": {
+   "get": {
+    "operationId": "exportAggregatedTimeEntries",
+    "tags": [
+     "TimeEntry"
+    ]
+   }
+  },
+  "/v1/organizations/{organization}/time-entries/{timeEntry}": {
+   "put": {
+    "operationId": "updateTimeEntry",
+    "tags": [
+     "TimeEntry"
+    ]
+   },
+   "delete": {
+    "operationId": "deleteTimeEntry",
+    "tags": [
+     "TimeEntry"
+    ]
+   }
+  },
+  "/v1/time-zones": {
+   "get": {
+    "operationId": "getTimezones",
+    "tags": [
+     "TimeZone"
+    ]
+   }
+  },
+  "/v1/users/me": {
+   "get": {
+    "operationId": "getMe",
+    "tags": [
+     "User"
+    ]
+   }
+  },
+  "/v1/users/me/current-organization": {
+   "put": {
+    "operationId": "updateMyCurrentOrganization",
+    "tags": [
+     "User"
+    ]
+   }
+  },
+  "/v1/users/{user}": {
+   "put": {
+    "operationId": "updateUser",
+    "tags": [
+     "User"
+    ]
+   },
+   "delete": {
+    "operationId": "deleteUser",
+    "tags": [
+     "User"
+    ]
+   }
+  },
+  "/v1/users/{user}/resend-email-verification": {
+   "post": {
+    "operationId": "resendUserEmailVerification",
+    "tags": [
+     "User"
+    ]
+   }
+  },
+  "/v1/users/{user}/reset-pending-email": {
+   "post": {
+    "operationId": "resetUserPendingEmail",
+    "tags": [
+     "User"
+    ]
+   }
+  },
+  "/v1/users/me/memberships": {
+   "get": {
+    "operationId": "getMyMemberships",
+    "tags": [
+     "UserMembership"
+    ]
+   }
+  },
+  "/v1/users/me/time-entries/active": {
+   "get": {
+    "operationId": "getMyActiveTimeEntry",
+    "tags": [
+     "UserTimeEntry"
+    ]
+   }
+  }
+ }
+}
